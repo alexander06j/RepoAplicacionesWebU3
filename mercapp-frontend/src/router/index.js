@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
-
+import ProductForm from '@/views/ProductForm.vue';
 
 // Lazy loading de vistas
 const Home = () => import('@/views/Home.vue');
@@ -10,10 +10,13 @@ const NotFound = () => import('@/views/NotFound.vue');
 
 const routes = [
   { path: '/', name: 'Home', component: Home },
+  { path: '/product/new', name: 'ProductNew', component: ProductForm },
   { path: '/product/:id', name: 'ProductDetail', component: ProductDetail, props: true },
+  { path: '/product/:id/edit', name: 'ProductEdit', component: ProductForm, props: true },
   { path: '/cart', name: 'Cart', component: Cart },
   { path: '/about', name: 'About', component: About },
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound }
+
 ];
 
 

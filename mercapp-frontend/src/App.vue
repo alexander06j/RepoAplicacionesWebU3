@@ -1,7 +1,18 @@
 <template>
-  <div>
+  <div id="app">
     <Navbar />
-    <router-view />
+
+    <Suspense>
+      <template #default>
+        <router-view />
+      </template>
+
+      <template #fallback>
+        <div class="loading">
+          <p>Cargando vista...</p>
+        </div>
+      </template>
+    </Suspense>
   </div>
 </template>
 
@@ -10,10 +21,12 @@ import Navbar from '@/components/Navbar.vue';
 </script>
 
 <style>
-/* Estilos globales opcionales */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
+.loading {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: #555;
 }
 </style>
+
 

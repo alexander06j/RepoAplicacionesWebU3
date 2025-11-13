@@ -1,6 +1,6 @@
 <template>
   <div class="product-card">
-    <img :src="product.imageUrl" alt="imagen" />
+    <img :src="product.imageUrl" :alt="product.name" />
     <h3>{{ product.name }}</h3>
     <p>{{ product.description }}</p>
     <p><strong>${{ product.price }}</strong></p>
@@ -13,6 +13,11 @@
     <!-- Link al detalle -->
     <router-link :to="`/product/${product._id}`">
       Ver detalle
+    </router-link>
+
+    <!-- Link a edición -->
+    <router-link :to="`/product/${product._id}/edit`" class="edit-link">
+      Editar
     </router-link>
   </div>
 </template>
@@ -51,5 +56,16 @@ button {
 button:hover {
   background: #45a049;
 }
+router-link {
+  margin-left: 0.5rem;
+  text-decoration: none;
+  color: #007bff;
+}
+.edit-link {
+  margin-left: 0.5rem;
+  color: #ff9800;
+}
+.edit-link:hover {
+  text-decoration: underline;
+}
 </style>
-
