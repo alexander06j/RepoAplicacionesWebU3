@@ -1,0 +1,6 @@
+<template>
+  <div>
+    <h1>404 - Página no encontrada</h1>
+    <p>La ruta que intentas acceder no existe.</p>
+  </div>
+</template>
