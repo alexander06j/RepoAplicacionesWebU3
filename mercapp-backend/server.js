@@ -30,6 +30,11 @@ app.get('/', (req, res) => {
   res.send('MercApp API funcionando ');
 });
 
+app.get('/api/health', (req, res) => {
+  res.json({ status: 'ok' });
+});
+
+
 // Middleware de errores
 const errorHandler = require('./middleware/errorHandler');
 app.use(errorHandler);
