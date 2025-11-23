@@ -1,7 +1,11 @@
 # RepoAplicacionesWebU3
 # Proyecto Aplicaciones Web U3 - MercApp
 
+<<<<<<< HEAD
 ## 👤 Datos del estudiante
+=======
+##  Datos del estudiante
+>>>>>>> b1ca57ab17a8e0656381a7fc700732976825908c
 - **Nombre:** Jostin Matamoros
 - **Carrera:** Software
 - **Asignatura:** Aplicaciones Web
@@ -44,7 +48,11 @@
 ## 📂 Instrucciones básicas de uso
 
 ### 1. Clonar el repositorio
+<<<<<<< HEAD
 ```bash
+=======
+bash
+>>>>>>> b1ca57ab17a8e0656381a7fc700732976825908c
 git clone https://github.com/alexander06j/RepoAplicacionesWebU3.git
 
 ### 2. Backend
