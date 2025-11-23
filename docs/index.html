@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mercapp - Micrositio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Mercapp - Micrositio del Proyecto</h1>
+
+  <h2>Resumen técnico</h2>
+  <p>Mercapp es un sistema compuesto por:</p>
+  <ul>
+    <li><strong>Frontend:</strong> Vue 3 + Vite (desplegado en Netlify)</li>
+    <li><strong>Backend:</strong> Node.js + Express (desplegado en Railway)</li>
+    <li><strong>Base de datos:</strong> MongoDB Atlas</li>
+  </ul>
+  <img src="assets/arquitectura.png" alt="Diagrama de arquitectura" />
+
+  <h2>Guía de ejecución local</h2>
+  <pre>
+# Clonar el repositorio
+git clone https://github.com/usuario/mercapp.git
+
+# Frontend
+cd mercapp-frontend
+npm install
+npm run dev
+
+# Backend
+cd mercapp-backend
+npm install
+npm run dev
+  </pre>
+  <p>Frontend en Netlify: <a href="https://mercapp.netlify.app">mercapp.netlify.app</a></p>
+  <p>API base en Railway: <a href="https://mercapp-api.up.railway.app">mercapp-api.up.railway.app</a></p>
+
+  <h2>Endpoints principales</h2>
+  <table>
+    <tr>
+      <th>Método</th>
+      <th>Ruta</th>
+      <th>Ejemplo Request</th>
+      <th>Ejemplo Response</th>
+    </tr>
+    <tr>
+      <td>GET</td>
+      <td>/api/products</td>
+      <td>/api/products</td>
+      <td>[{"id":1,"name":"Zapato"}]</td>
+    </tr>
+    <tr>
+      <td>POST</td>
+      <td>/api/login</td>
+      <td>{"email":"test@mail.com","password":"1234"}</td>
+      <td>{"token":"abc123"}</td>
+    </tr>
+  </table>
+</body>
+</html>
