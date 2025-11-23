@@ -4,7 +4,7 @@
 
     <!-- Botón para crear nuevo producto -->
     <router-link to="/product/new">
-      <button class="btn-new">➕ Nuevo producto</button>
+      <button class="btn-new"> Nuevo producto</button>
     </router-link>
 
     <!-- Buscador -->
@@ -60,7 +60,8 @@ const { addToCart } = useCart();
 
 // Consumir productos y categorías
 const { products, loading, error } = useProducts();
-const { data: categories } = useApi('http://localhost:4000/api/categories');
+const { data: categories } = useApi(`${import.meta.env.VITE_API_URL}/api/categories`);
+
 
 // Propiedad computada para lista visible
 const visibleProducts = computed(() => {

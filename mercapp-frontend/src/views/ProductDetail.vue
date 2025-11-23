@@ -24,7 +24,7 @@ const error = ref(null);
 
 async function fetchProduct() {
   try {
-    const res = await fetch(`http://localhost:4000/api/products/${route.params.id}`);
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/api/products/${route.params.id}`);
     if (!res.ok) throw new Error(res.statusText);
     product.value = await res.json();
   } catch (err) {
